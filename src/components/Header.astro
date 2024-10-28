@@ -1,5 +1,35 @@
 ---
+import logo from "../assets/images/logo_plastic_change.png";
+import { Image } from "astro:assets";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div
+  class="flex items-center justify-between px-4 py-2 bg-[#201D76] text-white"
+>
+  <!-- Logo -->
+  <div id="logo" class="flex-none">
+    <a href="/">
+      <Image src={logo} alt="Plastic Change logo" class="h-[40px] w-auto" />
+    </a>
+  </div>
+
+  <!-- Links og støt os knap-->
+  <div class="flex items-center space-x-6">
+    <!-- Links -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#" class="hover:text-gray-300">Plastikforurening </a>
+      <a href="#" class="hover:text-gray-300">Plastikproblemer</a>
+      <a href="#" class="hover:text-gray-300">Sådan gør vi</a>
+      <a href="#" class="hover:text-gray-300">Gode råd</a>
+      <a href="#" class="hover:text-gray-300">Tilmeld nyhedsbrev</a>
+    </nav>
+
+    <!-- Støt os knap -->
+    <a
+      href="#"
+      class="bg-[#F42C2C] text-white px-4 py-2 rounded-[10px] hover:bg-[#AC0E0E]"
+    >
+      Støt os
+    </a>
+  </div>
 </div>

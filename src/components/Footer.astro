@@ -1,59 +1,133 @@
-<footer class="bg-[#89A074] text-white py-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <!-- Addresse og kontakt Information -->
-      <div>
-        <h2 class="font-semibold text-lg">Let's Do It World NGO</h2>
-        <p class="mt-4">
-          Roosikrantsi 3, TALLINN 10119, Estonia <br>
-          Reg. code - 80562203
-        </p>
-        <a href="mailto:digital@ldiw.org" class="text-white underline mt-2 block">
-          digital@ldiw.org
+---
+import logo from "../assets/images/logo_plastic_change.png";
+import facebook from "../assets/images/facebook.svg";
+import { Image } from "astro:assets";
+---
+
+<footer class="bg-[#201D76] text-white py-10">
+  <div
+    class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8"
+  >
+    <!-- Addresse og kontakt information -->
+    <div>
+      <h2 class="font-semibold text-lg">Plastic Change</h2>
+      <p class="mt-4">Læderstræde 20, 1201 København K</p>
+      <p class="text-white mt-2 block">
+        Mail. <a href="mailto:info@plasticchange.org" class="text-white"
+          >info@plasticchange.org</a
+        >
+      </p>
+
+      <p class="text-white mt-2 block">
+        Tlf. <a href="tel:+4542667246" class="text-white">+45 42 66 72 46</a>
+      </p>
+    </div>
+
+    <!-- Logo og Social Media Ikoner -->
+    <div class="flex flex-col items-center">
+      <Image
+        src={logo}
+        alt="Plastic Change logo"
+        class="w-auto h-[40px] mb-4"
+      />
+
+      <div class="flex space-x-4">
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-6 h-6 text-white hover:text-[#F42C2C]"
+          >
+            <path
+              d="M18,2h-3c-2.8,0-5,2.2-5,5v3h-3v4h3v8h4v-8h3l1-4h-4v-3c0-.6.4-1,1-1h3V2Z"
+              fill="currentColor"></path>
+          </svg>
+        </a>
+
+        <a href="#" class="flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-6 h-6 text-white hover:text-[#F42C2C]"
+          >
+            <path
+              d="M23,3c-1,.7-2,1.2-3.1,1.5-1.6-1.9-4.5-2.1-6.3-.4-1,.9-1.6,2.1-1.5,3.4v1c-3.6,0-6.9-1.6-9-4.5,0,0-4,9,5,13-2.1,1.4-4.5,2.1-7,2,9,5,20,0,20-11.5,0-.3,0-.6,0-.8,1-1,1.7-2.3,2.1-3.7Z"
+              fill="currentColor"></path>
+          </svg>
+        </a>
+
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-6 h-6 text-white hover:text-[#F42C2C]"
+          >
+            <path
+              d="M16,8c3.3,0,6,2.7,6,6v7h-4v-7c0-1.1-.9-2-2-2s-2,.9-2,2v7h-4v-7c0-3.3,2.7-6,6-6Z"
+              fill="currentColor"></path>
+            <rect x="2" y="9" width="4" height="12" fill="currentColor"></rect>
+            <circle cx="4" cy="4" r="2" fill="currentColor"></circle>
+          </svg>
+        </a>
+
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6 text-white hover:text-[#F42C2C]"
+          >
+            <path
+              d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+            ></path>
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+            ></polygon>
+          </svg>
+        </a>
+
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-6 h-6 text-white hover:text-[#F42C2C]"
+          >
+            <rect
+              x="2"
+              y="2"
+              width="20"
+              height="20"
+              rx="5"
+              ry="5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"></rect>
+            <path
+              d="M16,11.4c.3,2.2-1.2,4.2-3.4,4.5-2.2.3-4.2-1.2-4.5-3.4-.3-2.2,1.2-4.2,3.4-4.5.4,0,.8,0,1.2,0,1.7.3,3.1,1.6,3.4,3.4Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"></path>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle>
+          </svg>
         </a>
       </div>
-      
-       <!-- Logo og Social Media Ikoner --> 
-      <div class="flex flex-col items-center">
-        <img src="#" alt="Let's Do It Logo" class="w-16 h-16 mb-4">
-        <div class="flex space-x-4">
-          <a href="#" class="text-white hover:text-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-              <!-- Facebook Icon -->
-              <path d="M22.67 0H1.33C.597 0 0 .597 0 1.33v21.34C0 23.403.597 24 1.33 24h11.48v-9.294H9.847V11.11h2.96V8.413c0-2.937 1.792-4.543 4.408-4.543 1.252 0 2.327.093 2.64.135v3.06l-1.81.001c-1.42 0-1.695.674-1.695 1.662v2.179h3.39l-.443 3.596h-2.948V24h5.775C23.403 24 24 23.403 24 22.67V1.33C24 .597 23.403 0 22.67 0z"/>
-            </svg>
-          </a>
-          <a href="#" class="text-white hover:text-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-              <!-- Instagram Icon -->
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.795.24 2.213.403a4.474 4.474 0 0 1 1.63.948 4.479 4.479 0 0 1 .947 1.63c.163.418.349 1.043.403 2.213.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.795-.403 2.213a4.479 4.479 0 0 1-.948 1.63 4.474 4.474 0 0 1-1.63.947c-.418.163-1.043.349-2.213.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.795-.24-2.213-.403a4.474 4.474 0 0 1-1.63-.948 4.479 4.479 0 0 1-.947-1.63c-.163-.418-.349-1.043-.403-2.213-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.24-1.795.403-2.213a4.479 4.479 0 0 1 .948-1.63 4.474 4.474 0 0 1 1.63-.947c.418-.163 1.043-.349 2.213-.403 1.266-.058 1.646-.07 4.85-.07m0-2.163C8.755 0 8.346.015 7.469.072 6.575.13 5.783.34 5.07.76 4.357 1.179 3.743 1.795 3.324 2.507c-.42.713-.63 1.505-.688 2.399C2.986 6.346 3 6.755 3 12c0 5.245-.014 5.654.072 6.531.058.894.268 1.686.688 2.399.419.712 1.035 1.328 1.747 1.747.713.42 1.505.63 2.399.688.877.058 1.286.072 6.531.072s5.654-.014 6.531-.072c.894-.058 1.686-.268 2.399-.688.712-.419 1.328-1.035 1.747-1.747.42-.713.63-1.505.688-2.399.058-.877.072-1.286.072-6.531s-.014-5.654-.072-6.531c-.058-.894-.268-1.686-.688-2.399-.419-.712-1.035-1.328-1.747-1.747-.713-.42-1.505-.63-2.399-.688C17.654.015 17.245 0 12 0z"/>
-              <circle cx="12" cy="12" r="3.294"/>
-              <path d="M18.406 5.594a1.44 1.44 0 0 1-1.44-1.44 1.44 1.44 0 0 1 1.44-1.44 1.44 1.44 0 0 1 1.44 1.44 1.44 1.44 0 0 1-1.44 1.44z"/>
-            </svg>
-          </a>
-          <a href="#" class="text-white hover:text-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-              <!-- LinkedIn Icon -->
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.75 20h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.25 12.268h-3v-5.601c0-1.334-.025-3.053-1.861-3.053-1.864 0-2.15 1.455-2.15 2.958v5.696h-3v-11h2.884v1.501h.042c.402-.762 1.383-1.563 2.848-1.563 3.046 0 3.606 2.003 3.606 4.606v6.456z"/>
-            </svg>
-          </a>
-          <a href="#" class="text-white hover:text-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-              <!-- YouTube Icon -->
-              <path d="M23.499 6.203a2.98 2.98 0 0 0-2.103-2.103C19.778 3.522 12 3.522 12 3.522s-7.778 0-9.396.578a2.98 2.98 0 0 0-2.103 2.103c-.577 1.617-.577 5.003-.577 5.003s0 3.386.577 5.003a2.98 2.98 0 0 0 2.103 2.103c1.617.578 9.396.578 9.396.578s7.778 0 9.396-.578a2.98 2.98 0 0 0 2.103-2.103c.577-1.617.577-5.003.577-5.003s0-3.386-.577-5.003zM9.755 15.569v-7.138l6.24 3.569-6.24 3.569z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Links Sektion -->
-      <div class="flex flex-col space-y-4 text-right">
-        <a href="#" class="text-white hover:underline">Blog</a>
-        <a href="#" class="text-white hover:underline">Marketing Materials</a>
-        <a href="#" class="text-white hover:underline">Constitution</a>
-        <a href="#" class="text-white hover:underline">Join the movement</a>
-      </div>
-      
     </div>
-  </footer>
-  
+
+    <!-- Links sektion -->
+    <div class="flex flex-col space-y-4 ml-40">
+      <a href="#" class="text-white hover:underline">Giv et bidrag</a>
+      <a
+        href="https://www.hjemhavn.dk/collections/plastic-change-merchandise"
+        target="_blank"
+        class="text-white hover:underline">Merchandise</a
+      >
+      <a href="#" class="text-white hover:underline">Gode råd</a>
+      <a href="#" class="text-white hover:underline">Nyhedsbrev</a>
+    </div>
+  </div>
+</footer>
