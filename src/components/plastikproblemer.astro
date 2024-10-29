@@ -1,0 +1,16 @@
+---
+import bund from "../assets/images/hvaderbund.png";
+import { Image } from "astro:assets";
+---
+
+<div
+  class="bg-cover bg-center h-screen relative"
+  style="background-image: url('/src/assets/images/problemersorthvid.webp');"
+>
+  <Image
+    src={bund}
+    alt="Sektionsbund"
+    class="absolute top-3 left-0 w-full h-auto"
+    style="transform: translateY(-30%);"
+  />
+</div>
