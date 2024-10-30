@@ -1,24 +1,50 @@
 ---
 import bund from "../assets/images/hvaderbund.png";
-import bund2 from "../assets/images/problemerbund.png";
+import farve from "../assets/images/problemerfarve.webp";
+import sorthvid from "../assets/images/problemersorthvid.webp";
 import { Image } from "astro:assets";
 ---
 
-<div
-  class="bg-cover bg-center h-screen relative"
-  style="background-image: url('/src/assets/images/problemersorthvid.webp');"
->
+<!-- <Image src={bund} alt="Sektionsbund" class="absolute top- w-full h-auto" /> -->
+<section class="crossfadeimages mx-auto relative h-screen lg:w-screen">
   <Image
-    src={bund}
-    alt="Sektionsbund"
-    class="absolute top-3 left-0 w-full h-auto"
-    style="transform: translateY(-30%);"
+    src={farve}
+    alt="En plastikflaske ved havet i farve"
+    class="crossfadetopimg object-cover h-screen absolute top-0 z-0 my-0"
+  />
+  <Image
+    src={sorthvid}
+    alt="En plastikflaske ved havet i sort hvid"
+    class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0"
   />
 
-  <Image
-    src={bund2}
-    alt="Sektionsbund"
-    class="absolute w-full"
-    style="top: -20%;"
-  />
-</div>
+  <div class="absolute top-0 left-0 right-0 z-10 flex flex-col items-end pr-10">
+    <h1 class="text-white text-4xl font-bold mb-4 mt-20">
+      Plastik i naturen skaber uoverskuelige problemer
+    </h1>
+    <div class="bg-[#201D76] bg-opacity-80 p-4 rounded-[10px] ml-[800px]">
+      <p class="text-white text-lg">
+        Plastikforurening truer livet i havet og på jorden. Hver dag forurenes
+        naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert
+        minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler,
+        skildpadder, delfiner og ender i maver på hvaler, fugle og fisk.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { animate, scroll } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    scroll(
+      animate(".crossfadebottomimg", {
+        opacity: [1, 0],
+      }),
+      {
+        target: document.querySelector(".crossfadeimages"),
+        offset: ["-25vh", "25vh"],
+      }
+    );
+  });
+</script>

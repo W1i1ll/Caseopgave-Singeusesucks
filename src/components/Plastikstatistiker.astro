@@ -1,0 +1,52 @@
+---
+import bund2 from "../assets/images/problemerbund.png";
+import lastbil from "../assets/images/lastbil.png";
+import europa from "../assets/images/europa.png";
+import { Image } from "astro:assets";
+---
+
+<div class="h-full bg-[#201D76] pt-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 mb-8 ml-32">
+    <div class="flex flex-col mt-20">
+      <h1 class="text-white text-3xl">
+        Millioner af tons plastisk produceres, mens det også ender i havet
+      </h1>
+      <p class="text-white mt-2">
+        I dag produceres over 300 mio. ton plastik om året på verdensplan.
+        <br /><br />
+        Hvert år udledes omkring 8 mio. tons affald i verdenshavene. Det svarer til
+        en lastbil fuld af plastik bliver tømt ud i havet hvert eneste minut.
+      </p>
+    </div>
+
+    <div class="flex justify-center items-center mr-32">
+      <Image
+        src={lastbil}
+        alt="En lastbil der hælder plastikflasker ud"
+        class="w-full"
+      />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 mt-64 mr-32">
+    <div class="flex justify-center items-center ml-32">
+      <Image
+        src={europa}
+        alt="En plastikflaske over et europakort der viser 39,7%"
+        class="w-full"
+      />
+    </div>
+
+    <div class="flex flex-col justify-center">
+      <h1 class="text-white text-3xl">
+        Engangsplastik skaber massive miljøproblemer i hele verden
+      </h1>
+      <p class="text-white mt-2">
+        En af de største udfordringer med plastikforurening er den høje
+        anvendelse af engangsplastik, som kun bruges én gang og ikke
+        genanvendes. <br /><br />
+        I Europa udgør plastikemballage hele 39,7% af det samlede plastikforbrug.
+      </p>
+    </div>
+  </div>
+</div>
