@@ -2,13 +2,17 @@
 import skildpadde1 from "../assets/images/skildpadde2.png";
 import pose1 from "../assets/images/pose1.png";
 import top from "../assets/images/hvadertop.png";
+import baggrund from "../assets/images/landingpagebaggrund.webp";
 import { Image } from "astro:assets";
 ---
 
-<div
-  class="bg-cover bg-center h-screen pt-[615px] relative"
-  style="background-image: url('/src/assets/images/landingpagebaggrund.webp')"
->
+<div class="relative h-screen pt-[615px] bg-cover bg-center">
+  <Image
+    src={baggrund}
+    alt="Landing page background"
+    class="absolute inset-0 w-full h-full object-cover -z-10"
+  />
+
   <Image
     src={pose1}
     alt="En skildpadde"
