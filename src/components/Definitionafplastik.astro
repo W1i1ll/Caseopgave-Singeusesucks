@@ -1,7 +1,7 @@
 ---
-import fiskpose from "../assets/images/fiskpose.png";
 import top from "../assets/images/hvadertop.png";
 import bund from "../assets/images/hvaderbund.png";
+import fiskpose from "../assets/images/fiskpose.png";
 import { Image } from "astro:assets";
 ---
 
@@ -11,24 +11,77 @@ import { Image } from "astro:assets";
     alt="Sektionsindeling"
     class="w-full h-100 absolute -top-3.5"
   />
-
   <div
     class="grid grid-cols-1 md:grid-cols-2 h-[80vh] p-5 bg-[#201D76] z-10 pt-16"
   >
-    <div class="flex flex-col justify-center text-left text-white">
-      <h1 class="text-3xl font-bold gantari">Hvad er plastikforurening?</h1>
-      <p class="mt-2 text-lg albert">
+    <div class="flex flex-col justify-center text-left text-white pl-40">
+      <h1 class="text-4xl font-bold gantari">Hvad er plastikforurening?</h1>
+      <p class="mt-6 text-base albert">
         Plastikforurening opstår, når plastikaffald ender i naturen og miljøet.
         Hvert år havner millioner af tons plastik i havene, floderne og på
         landjorden, hvor det skader dyreliv, forurener vores økosystemer og
-        bryder ned i mikroplastik, som forbliver i miljøet i hundredvis af år.
-        Engangsplastik som poser, sugerør og flasker er særligt problematiske,
-        da de ofte bliver brugt kortvarigt, men har en langvarig skadelig effekt
-        på vores planet.
+        bryder ned i mikroplastik, som forbliver i miljøet i hundredvis af år. <br
+        />
+        <br />
+        Engangsplastik som poser, sugerør og flasker er særligt problematiske, da
+        de ofte bliver brugt kortvarigt, men har en langvarig skadelig effekt på
+        vores planet.
       </p>
     </div>
-    <div class="flex justify-center items-center">
-      <Image src={fiskpose} alt="En fisk i en plastikpose" class="" />
+    <div class="flex justify-center items-center relative">
+      <Image
+        src={fiskpose}
+        alt="En fisk i en plastikpose"
+        class="transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-3"
+      />
+      <div class="absolute bottom-96 left-40 transform -translate-x-1/2">
+        <div class="bubble"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+      </div>
     </div>
   </div>
+
+  <div class="relative z-20">
+    <Image src={bund} alt="Bølgeovergang" class="w-full mb-[-50px]" />
+  </div>
 </div>
+
+<style>
+  .fiskpose {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  .bubble {
+    width: 12px;
+    height: 12px;
+    background: rgba(137, 198, 220, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: bubble-animation 2s infinite;
+  }
+
+  .bubble-2 {
+    width: 10px;
+    height: 10px;
+    animation-duration: 1.8s;
+  }
+
+  .bubble-3 {
+    width: 8px;
+    height: 8px;
+    animation-duration: 2.2s;
+  }
+
+  @keyframes bubble-animation {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-60px) scale(0);
+      opacity: 0;
+    }
+  }
+</style>

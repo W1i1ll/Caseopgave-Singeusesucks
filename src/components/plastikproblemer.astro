@@ -1,12 +1,13 @@
 ---
-import bund from "../assets/images/hvaderbund.png";
+import bund from "../assets/images/problemerbund.png";
 import farve from "../assets/images/problemerfarve.webp";
 import sorthvid from "../assets/images/problemersorthvid.webp";
 import { Image } from "astro:assets";
 ---
 
-<!-- <Image src={bund} alt="Sektionsbund" class="absolute top- w-full h-auto" /> -->
-<section class="crossfadeimages mx-auto relative h-screen lg:w-screen">
+<section
+  class="crossfadeimages mx-auto relative h-screen lg:w-screen mt-[-20px]"
+>
   <Image
     src={farve}
     alt="En plastikflaske ved havet i farve"
@@ -18,12 +19,12 @@ import { Image } from "astro:assets";
     class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0"
   />
 
-  <div class="absolute top-0 left-0 right-0 z-10 flex flex-col items-end pr-10">
-    <h1 class="text-white text-4xl font-bold mb-4 mt-20 gantari">
+  <div class="absolute top-0 left-0 right-0 z-10 flex flex-col items-end mr-48">
+    <h1 class="text-white text-5xl font-bold mb-4 mt-20 gantari w-[600px] mr-8">
       Plastik i naturen skaber uoverskuelige problemer
     </h1>
-    <div class="bg-[#201D76] bg-opacity-80 p-4 rounded-[10px] ml-[800px]">
-      <p class="text-white albert text-lg">
+    <div class="bg-[#201D76] bg-opacity-80 p-4 rounded-[10px] w-[600px] mr-8">
+      <p class="text-white albert text-base">
         Plastikforurening truer livet i havet og på jorden. Hver dag forurenes
         naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert
         minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler,
