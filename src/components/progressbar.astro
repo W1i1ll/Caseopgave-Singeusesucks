@@ -1,0 +1,19 @@
+<div
+  class="progress-bar h-4 fixed w-full bg-gradient-to-r from-[#2C37CA] to-[#F42C2C] left-0 top-0 z-50"
+  style="transform-origin: left; transform: scaleX(0);"
+>
+</div>
+
+<script>
+  import { animate } from "@motionone/dom";
+
+  function updateProgressBar() {
+    const scrollPosition = window.scrollY;
+    const windowHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollPosition / windowHeight;
+    animate(".progress-bar", { scaleX: scrollPercent }, { duration: 0 });
+  }
+
+  window.addEventListener("scroll", updateProgressBar);
+</script>
