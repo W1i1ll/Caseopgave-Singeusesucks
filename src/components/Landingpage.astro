@@ -1,8 +1,14 @@
 ---
-import skildpadde1 from "../assets/images/skildpadde2.png";
-import pose1 from "../assets/images/pose1.png";
 import top from "../assets/images/hvadertop.png";
 import baggrund from "../assets/images/landingpagebaggrund.webp";
+import pose1 from "../assets/images/pose1.png";
+import pose2 from "../assets/images/pose2.png";
+import flaske1 from "../assets/images/flaske1.png";
+import flaske2 from "../assets/images/flaske2.png";
+import fisk1 from "../assets/images/fisk1.png";
+import fisk2 from "../assets/images/fisk2.png";
+import skildpadde2 from "../assets/images/skildpadde2.png";
+import skildpadde1 from "../assets/images/skildpadde1.png";
 import { Image } from "astro:assets";
 ---
 
@@ -15,16 +21,183 @@ import { Image } from "astro:assets";
 
   <Image
     src={pose1}
-    alt="En skildpadde"
-    class="absolute top-[100px] left-[200px]"
+    alt="En plastikpose"
+    class="absolute top-[100px] left-[200px] w-32 h-32 float1"
   />
+  <Image
+    src={skildpadde2}
+    alt="En skildpadde"
+    class="absolute top-[80px] left-[500px] w-52 h-52 swim z-20"
+  />
+
+  <Image
+    src={pose2}
+    alt="En plastikpose"
+    class="absolute top-[300px] left-[800px] w-32 h-32 float2"
+  />
+
+  <Image
+    src={flaske1}
+    alt="En plastikflaske"
+    class="absolute top-[100px] left-[1100px] w-48 h-48 float3"
+  />
+
+  <Image
+    src={fisk2}
+    alt="En fisk"
+    class="absolute top-[250px] left-[100px] w-32 h-32 swim3"
+  />
+
+  <Image
+    src={flaske2}
+    alt="En plastikflaske"
+    class="absolute top-[400px] left-[200px] w-48 h-48 float2"
+  />
+
+  <Image
+    src={fisk1}
+    alt="En fisk"
+    class="absolute top-[425px] left-[650px] w-32 h-32 swim2"
+  />
+
   <Image
     src={skildpadde1}
     alt="En skildpadde"
-    class="absolute top-[100px] left-[600px]"
+    class="absolute top-[550px] left-[1000px] w-60 h-60 float"
   />
-  <h1 class="text-7xl font-bold text-white ml-10">#SINGLEUSESUCKS</h1>
-  <h2 class="text-2xl text-white mt-4 ml-10">
+
+  <h1 class="text-7xl font-bold text-white ml-10 gantari">#SINGLEUSESUCKS</h1>
+  <h2 class="text-2xl text-white mt-4 ml-10 gantari">
     Mere handling, mindre plastik – Start i dag!
   </h2>
 </div>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes swim {
+    0% {
+      transform: translateX(-400px);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+
+  @keyframes float1 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float3 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .float1 {
+    animation: float1 4s ease-in-out infinite;
+  }
+
+  .float2 {
+    animation: float2 5s ease-in-out infinite;
+  }
+
+  .float3 {
+    animation: float3 6s ease-in-out infinite;
+  }
+
+  .swim {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    animation: swim 15s linear infinite;
+  }
+
+  @keyframes swim2 {
+    0% {
+      transform: translateX(-400px);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+
+  .swim2 {
+    position: absolute;
+    top: 425px;
+    left: 0;
+    animation: swim 10s linear infinite;
+  }
+
+  @keyframes swim3 {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-400px);
+    }
+  }
+
+  .swim3 {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    animation: swim3 8s linear infinite;
+  }
+
+  @keyframes swim4 {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-400px);
+    }
+  }
+
+  .swim4 {
+    position: absolute;
+    top: 550px;
+    left: 0;
+    animation: swim3 10s linear infinite;
+  }
+</style>
