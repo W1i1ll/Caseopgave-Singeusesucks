@@ -1,0 +1,32 @@
+---
+import backgroundImage from "../assets/images/noplastic.png"; // Replace with the path to your underwater background image
+import { Image } from "astro:assets";
+---
+
+<section class="relative h-screen flex flex-col items-center justify-center text-center text-white px-4">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <Image src={backgroundImage} alt="Underwater background" class="object-cover w-full h-full opacity-100" />
+  </div>
+
+  <!-- Overlay Content -->
+  <div class="relative z-10 bg-opacity-80 bg-[#201D76] p-6 rounded-lg w-full max-w-md">
+    <h2 class="text-2xl font-semibold mb-4">Tilmeld dig vores nyhedsbrev</h2>
+    <p class="text-sm mb-6">Få de seneste nyheder og opdateringer direkte i din indbakke.</p>
+
+    <!-- Input Fields -->
+    <form class="space-y-4">
+      <input type="text" placeholder="Dit navn" class="w-full p-3 rounded-md bg-white text-black placeholder-gray-500" />
+      <input type="email" placeholder="Din email" class="w-full p-3 rounded-md bg-white text-black placeholder-gray-500" />
+      
+      <!-- Checkbox -->
+      <div class="flex items-center space-x-2 text-xs text-gray-300">
+        <input type="checkbox" id="privacy-policy" class="h-4 w-4" />
+        <label for="privacy-policy" class="cursor-pointer">Jeg accepterer at modtage e-mails og bekræfter, at jeg har læst og forstået privatlivspolitikken.</label>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full p-3 rounded-md bg-red-500 text-white font-semibold hover:bg-red-600">Tilmeld</button>
+    </form>
+  </div>
+</section>
