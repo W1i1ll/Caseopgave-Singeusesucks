@@ -12,7 +12,10 @@ import { Image } from "astro:assets";
 
 <div class="h-full bg-[#201D76] pt-20">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 mb-8 mx-5 md:mx-32">
-    <div class="flex flex-col mt-20 max-w-xl mx-auto md:mr-20">
+    <div
+      class="flex flex-col mt-20 max-w-xl mx-auto md:mr-20 fade-in-left"
+      id="section1"
+    >
       <h1 class="text-white text-3xl md:text-4xl font-bold gantari text-left">
         Millioner af tons plastisk produceres, mens det også ender i havet
       </h1>
@@ -24,7 +27,7 @@ import { Image } from "astro:assets";
       </p>
     </div>
 
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center fade-in-right">
       <Image
         src={lastbil}
         alt="En lastbil der hælder plastikflasker ud"
@@ -36,7 +39,7 @@ import { Image } from "astro:assets";
   <div
     class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 mt-64 mx-5 md:mx-32 pb-36"
   >
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center fade-in-left" id="section2">
       <Image
         src={europa}
         alt="En plastikflaske over et europakort der viser 39,7%"
@@ -44,7 +47,10 @@ import { Image } from "astro:assets";
       />
     </div>
 
-    <div class="flex flex-col justify-center max-w-xl mx-auto md:ml-20">
+    <div
+      class="flex flex-col justify-center max-w-xl mx-auto md:ml-20 fade-in-right"
+      id="section3"
+    >
       <h1 class="text-white text-3xl md:text-4xl font-bold gantari text-left">
         Engangsplastik skaber massive miljøproblemer i hele verden
       </h1>
@@ -57,3 +63,52 @@ import { Image } from "astro:assets";
     </div>
   </div>
 </div>
+
+<style>
+  .fade-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition:
+      transform 1.5s ease,
+      opacity 1.5s ease;
+  }
+
+  .fade-in-left.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .fade-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+    transition:
+      transform 2s ease,
+      opacity 2s ease;
+  }
+
+  .fade-in-right.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const sectionsLeft = document.querySelectorAll(".fade-in-left");
+    const sectionsRight = document.querySelectorAll(".fade-in-right");
+
+    sectionsLeft.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        section.classList.add("visible");
+      }
+    });
+
+    sectionsRight.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        section.classList.add("visible");
+      }
+    });
+  });
+</script>
