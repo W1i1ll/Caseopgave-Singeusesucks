@@ -32,8 +32,29 @@ import { Image } from "astro:assets";
     <a
       href="#"
       class="bg-[#F42C2C] gantari text-white px-4 py-2 rounded-[10px] hover:bg-[#DC2929] font-bold flex items-center justify-center"
+      >Støt os</a
     >
-      Støt os
-    </a>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('nav a[href^="#"]');
+
+    links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const targetId = link.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+  });
+</script>
