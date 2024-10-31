@@ -5,18 +5,23 @@ import fiskpose from "../assets/images/fiskpose.png";
 import { Image } from "astro:assets";
 ---
 
-<div class="relative">
-  <Image
-    src={top}
-    alt="Sektionsindeling"
-    class="w-full h-100 absolute -top-3.5"
-  />
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 h-[80vh] p-5 bg-[#201D76] z-10 pt-16"
-  >
-    <div class="flex flex-col justify-center text-left text-white pl-40">
-      <h1 class="text-4xl font-bold gantari">Hvad er plastikforurening?</h1>
-      <p class="mt-6 text-base albert">
+<section id="plastikforurening">
+  <div class="relative">
+    <Image
+      src={top}
+      alt="Sektionsindeling"
+      class="absolute w-full h-auto max-w-full top- md:-top-3.5"
+    />
+  </div>
+
+  <div class="grid md:grid-cols-2 h-[80vh] p-5 bg-[#201D76] z-10 pt-16">
+    <div
+      class="flex flex-col justify-center text-left text-white pl-5 md:pl-40"
+    >
+      <h1 class="text-2xl md:text-4xl font-bold gantari">
+        Hvad er plastikforurening?
+      </h1>
+      <p class="mt-4 md:mt-6 text-sm md:text-base albert">
         Plastikforurening opstår, når plastikaffald ender i naturen og miljøet.
         Hvert år havner millioner af tons plastik i havene, floderne og på
         landjorden, hvor det skader dyreliv, forurener vores økosystemer og
@@ -28,6 +33,7 @@ import { Image } from "astro:assets";
         vores planet.
       </p>
     </div>
+
     <div class="flex justify-center items-center relative">
       <Image
         src={fiskpose}
@@ -41,11 +47,14 @@ import { Image } from "astro:assets";
       </div>
     </div>
   </div>
-
   <div class="relative z-20">
-    <Image src={bund} alt="Bølgeovergang" class="w-full mb-[-50px]" />
+    <Image
+      src={bund}
+      alt="Bølgeovergang"
+      class="w-full mb-[-50px] hidden md:block"
+    />
   </div>
-</div>
+</section>
 
 <style>
   .fiskpose {

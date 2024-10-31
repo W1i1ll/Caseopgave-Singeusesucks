@@ -11,12 +11,12 @@ import { Image } from "astro:assets";
 </div>
 
 <div class="h-full bg-[#201D76] pt-20">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 mb-8 mx-32">
-    <div class="flex flex-col mt-20 max-w-xl mr-20">
-      <h1 class="text-white text-4xl font-bold gantari">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 mb-8 mx-5 md:mx-32">
+    <div class="flex flex-col mt-20 max-w-xl mx-auto md:mr-20">
+      <h1 class="text-white text-3xl md:text-4xl font-bold gantari text-left">
         Millioner af tons plastisk produceres, mens det også ender i havet
       </h1>
-      <p class="text-white albert mt-6">
+      <p class="text-white albert mt-6 text-left">
         I dag produceres over 300 mio. ton plastik om året på verdensplan.
         <br /><br />
         Hvert år udledes omkring 8 mio. tons affald i verdenshavene. Det svarer til
@@ -28,25 +28,27 @@ import { Image } from "astro:assets";
       <Image
         src={lastbil}
         alt="En lastbil der hælder plastikflasker ud"
-        class="w-full"
+        class="w-full h-auto max-w-xs mt-10 md:max-w-full"
       />
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 mt-64 mx-32 pb-36">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 mt-64 mx-5 md:mx-32 pb-36"
+  >
     <div class="flex justify-center items-center">
       <Image
         src={europa}
         alt="En plastikflaske over et europakort der viser 39,7%"
-        class="w-full"
+        class="w-full h-auto max-w-xs md:max-w-full"
       />
     </div>
 
-    <div class="flex flex-col justify-center max-w-xl ml-20">
-      <h1 class="text-white text-4xl font-bold gantari">
+    <div class="flex flex-col justify-center max-w-xl mx-auto md:ml-20">
+      <h1 class="text-white text-3xl md:text-4xl font-bold gantari text-left">
         Engangsplastik skaber massive miljøproblemer i hele verden
       </h1>
-      <p class="text-white mt-6 albert">
+      <p class="text-white mt-6 albert text-left">
         En af de største udfordringer med plastikforurening er den høje
         anvendelse af engangsplastik, som kun bruges én gang og ikke
         genanvendes. <br /><br />
