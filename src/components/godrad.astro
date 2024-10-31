@@ -1,0 +1,64 @@
+---
+import baggrund from "../assets/images/turtleplastik.png"; // Your background image
+import icon1 from "../assets/images/icon1.png"; // første kort
+import icon2 from "../assets/images/icon2.png"; // andet kort
+import icon3 from "../assets/images/icon3.png"; // tredje kort
+import { Image } from "astro:assets";
+---
+
+<section class="relative h-screen w-full flex flex-col items-center justify-center text-white overflow-hidden">
+  <!-- Background Images with Crossfade -->
+  <div class="absolute inset-0">
+    <Image src={baggrund} alt="Underwater background" class="object-cover w-full h-full opacity-100 crossfade-image" />
+  </div>
+
+  <!-- Overlay Text and Icons -->
+  <div class="relative z-10 flex flex-col items-center text-center px-4">
+    <h1 class="text-3xl lg:text-4xl font-bold mb-2">3 gode råd mod plastikspild</h1>
+    <p class="text-lg mb-10">Undgå plastik i havet med disse trin</p>
+
+    <!-- Advice Cards -->
+    <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8">
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center bg-blue-900 bg-opacity-80 p-6 rounded-lg max-w-xs lg:max-w-sm">
+        <Image src={icon1} alt="Icon for reducing plastic bags" class="h-16 w-16 mb-4" />
+        <h2 class="text-xl font-semibold mb-2">Vælg genbrug og undgå engangsplastik</h2>
+        <p class="text-sm">Brug genanvendelige produkter som vandflasker, kaffekopper, og stofposer i stedet for engangsplastik...</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col items-center bg-blue-900 bg-opacity-80 p-6 rounded-lg max-w-xs lg:max-w-sm">
+        <Image src={icon2} alt="Recycle icon" class="h-16 w-16 mb-4" />
+        <h2 class="text-xl font-semibold mb-2">Sorter og genbrug dit affald</h2>
+        <p class="text-sm">Brug genanvendelige produkter som vandflasker, kaffekopper, og stofposer i stedet for engangsplastik. 
+
+            Mange dagligdags produkter findes i bæredygtige versioner, som kan bruges igen og igen, hvilket reducerer plastikaffald betydeligt.
+            </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex flex-col items-center bg-blue-900 bg-opacity-80 p-6 rounded-lg max-w-xs lg:max-w-sm">
+        <Image src={icon3} alt="Initiative icon" class="h-16 w-16 mb-4" />
+        <h2 class="text-xl font-semibold mb-2">Støt initiativer og politisk handling</h2>
+        <p class="text-sm">Vær med til at skabe forandring ved at støtte miljøorganisationer som Plastic Change...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { animate, scroll } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Add scroll-based crossfade effect for background image
+    scroll(
+      animate(".crossfade-image", {
+        opacity: [1, 0.8, 1], // Fade slightly on scroll
+      }),
+      {
+        target: document.querySelector(".crossfade-image"),
+        offset: ["0vh", "50vh"],
+      }
+    );
+  });
+</script>
