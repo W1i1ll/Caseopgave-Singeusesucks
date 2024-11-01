@@ -1,8 +1,8 @@
 ---
-import baggrund from "../assets/images/turtleplastik.png"; // Your background image
-import icon1 from "../assets/images/icon1.png"; // første kort
-import icon2 from "../assets/images/icon2.png"; // andet kort
-import icon3 from "../assets/images/icon3.png"; // tredje kort
+import baggrund from "../assets/images/turtleplastik.png"; // Background image
+import icon1 from "../assets/images/icon1.png"; // First card icon
+import icon2 from "../assets/images/icon2.png"; // Second card icon
+import icon3 from "../assets/images/icon3.png"; // Third card icon
 import { Image } from "astro:assets";
 ---
 
@@ -14,51 +14,44 @@ import { Image } from "astro:assets";
 
   <!-- Overlay Text and Icons -->
   <div class="relative z-10 flex flex-col items-center text-center px-4">
-    <h1 class="text-3xl lg:text-4xl font-bold mb-2">3 gode råd mod plastikspild</h1>
-    <p class="text-lg mb-10">Undgå plastik i havet med disse trin</p>
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">3 gode råd mod plastikspild</h1>
+    <p class="text-sm sm:text-lg mb-6 sm:mb-10">Undgå plastik i havet med disse trin</p>
 
-    <!-- Advice Cards -->
-    <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8">
+    <!-- Advice Cards with Fade-In Animation -->
+    <div class="flex flex-col space-y-6 lg:flex-row lg:space-y-0 lg:space-x-12 w-full max-w-5xl">
       <!-- Card 1 -->
-      <div class="flex flex-col items-center bg-blue-900 bg-opacity-80 p-6 rounded-lg max-w-xs lg:max-w-sm">
-        <Image src={icon1} alt="Icon for reducing plastic bags" class="h-16 w-16 mb-4" />
-        <h2 class="text-xl font-semibold mb-2">Vælg genbrug og undgå engangsplastik</h2>
-        <p class="text-sm">Brug genanvendelige produkter som vandflasker, kaffekopper, og stofposer i stedet for engangsplastik...</p>
+      <div class="card opacity-0 transform translate-y-4 transition-opacity transition-transform duration-700 delay-[200ms] flex flex-col items-center p-6 rounded-lg max-w-xs sm:max-w-sm mx-auto lg:mx-0">
+        <Image src={icon1} alt="Icon for reducing plastic bags" class="h-20 w-20 sm:h-24 sm:w-24 object-contain mb-6 sm:mb-10" />
+        <h2 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Vælg genbrug og undgå engangsplastik</h2>
+        <p class="text-xs sm:text-sm">Brug genanvendelige produkter som vandflasker, kaffekopper, og stofposer i stedet for engangsplastik. Mange dagligdags produkter findes i bæredygtige versioner, som kan bruges igen og igen, hvilket reducerer plastikaffald betydeligt.</p>
       </div>
 
       <!-- Card 2 -->
-      <div class="flex flex-col items-center bg-blue-900 bg-opacity-80 p-6 rounded-lg max-w-xs lg:max-w-sm">
-        <Image src={icon2} alt="Recycle icon" class="h-16 w-16 mb-4" />
-        <h2 class="text-xl font-semibold mb-2">Sorter og genbrug dit affald</h2>
-        <p class="text-sm">Brug genanvendelige produkter som vandflasker, kaffekopper, og stofposer i stedet for engangsplastik. 
-
-            Mange dagligdags produkter findes i bæredygtige versioner, som kan bruges igen og igen, hvilket reducerer plastikaffald betydeligt.
-            </p>
+      <div class="card opacity-0 transform translate-y-4 transition-opacity transition-transform duration-700 delay-[400ms] flex flex-col items-center p-6 rounded-lg max-w-xs sm:max-w-sm mx-auto lg:mx-0">
+        <Image src={icon2} alt="Recycle icon" class="h-20 w-20 sm:h-24 sm:w-24 object-contain mb-6 sm:mb-10" />
+        <h2 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Sorter og genbrug dit affald</h2>
+        <p class="text-xs sm:text-sm">Sørg for at sortere dit affald, så plastik kan genanvendes korrekt. Ved at følge kommunens affaldssorteringsregler kan du sikre, at mere plastik genanvendes og ikke ender som affald i naturen.</p>
       </div>
 
       <!-- Card 3 -->
-      <div class="flex flex-col items-center bg-blue-900 bg-opacity-80 p-6 rounded-lg max-w-xs lg:max-w-sm">
-        <Image src={icon3} alt="Initiative icon" class="h-16 w-16 mb-4" />
-        <h2 class="text-xl font-semibold mb-2">Støt initiativer og politisk handling</h2>
-        <p class="text-sm">Vær med til at skabe forandring ved at støtte miljøorganisationer som Plastic Change...</p>
+      <div class="card opacity-0 transform translate-y-4 transition-opacity transition-transform duration-700 delay-[600ms] flex flex-col items-center p-6 rounded-lg max-w-xs sm:max-w-sm mx-auto lg:mx-0">
+        <Image src={icon3} alt="Initiative icon" class="h-20 w-20 sm:h-24 sm:w-24 object-contain mb-6 sm:mb-10" />
+        <h2 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Støt initiativer og politisk handling</h2>
+        <p class="text-xs sm:text-sm">Vær med til at skabe forandring ved at støtte miljøorganisationer som Plastic Change, der arbejder for lovgivning og initiativer mod plastikforurening. Du kan også stemme på politikere, der prioriterer bæredygtighed og aktivt arbejder for at løse plastikkrisen.</p>
       </div>
     </div>
   </div>
 </section>
 
 <script>
-  import { animate, scroll } from "motion";
+  import { animate, inView } from "motion";
 
   document.addEventListener("DOMContentLoaded", () => {
-    // Add scroll-based crossfade effect for background image
-    scroll(
-      animate(".crossfade-image", {
-        opacity: [1, 0.8, 1], // Fade slightly on scroll
-      }),
-      {
-        target: document.querySelector(".crossfade-image"),
-        offset: ["0vh", "50vh"],
-      }
-    );
+    // Add fade-in effect for each card when it comes into view
+    document.querySelectorAll('.card').forEach((card) => {
+      inView(card, () => {
+        animate(card, { opacity: 1, transform: "translateY(0)" });
+      }, { rootMargin: "-50px 0px" });
+    });
   });
 </script>
