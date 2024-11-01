@@ -7,9 +7,9 @@ import { Image } from "astro:assets";
 
 <section class="w-full flex flex-col items-center">
   <!-- Section 1 -->
-  <div class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+  <div class="relative h-screen w-screen flex flex-col items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <Image src={bg1} alt="Background 1" class="object-cover w-full h-full" />
+      <Image src={bg1} alt="Background 1" class="object-cover w-screen h-screen" />
     </div>
     <div class="relative z-10 text-center bg-blue-800 bg-opacity-80 p-6 rounded-md max-w-md text-white sticky top-20">
       <h1 class="text-xl font-bold mb-4">Sådan arbejder vi for en bedre fremtid</h1>
@@ -21,9 +21,9 @@ import { Image } from "astro:assets";
   </div>
 
   <!-- Section 2 -->
-  <div class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+  <div class="relative h-screen w-screen flex flex-col items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <Image src={bg2} alt="Background 2" class="object-cover w-full h-full" />
+      <Image src={bg2} alt="Background 2" class="object-cover w-screen h-screen" />
     </div>
     <div class="relative z-10 text-center bg-blue-800 bg-opacity-80 p-6 rounded-md max-w-md text-white sticky top-20">
       <h2 class="text-lg font-semibold mb-2">Politik og grøn lovgivning</h2>
@@ -34,9 +34,9 @@ import { Image } from "astro:assets";
   </div>
 
   <!-- Section 3 -->
-  <div class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+  <div class="relative h-screen w-screen flex flex-col items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <Image src={bg3} alt="Background 3" class="object-cover w-full h-full" />
+      <Image src={bg3} alt="Background 3" class="object-cover w-screen h-screen" />
     </div>
     <div class="relative z-10 text-center bg-blue-800 bg-opacity-80 p-6 rounded-md max-w-md text-white sticky top-20">
       <h2 class="text-lg font-semibold mb-2">Politik og grøn lovgivning</h2>
@@ -46,6 +46,7 @@ import { Image } from "astro:assets";
     </div>
   </div>
 </section>
+
 
 <script>
   import { animate, inView } from "motion";
