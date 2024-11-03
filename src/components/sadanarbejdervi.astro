@@ -1,7 +1,7 @@
 ---
-import bg1 from "../assets/images/section1.jpg"; // First section background
-import bg2 from "../assets/images/section2.png"; // Second section background
-import bg3 from "../assets/images/section3.png"; // Third section background
+import bg1 from "../assets/images/section1.jpg"; // første section background
+import bg2 from "../assets/images/section2.png"; // anden section background
+import bg3 from "../assets/images/section3.png"; // tredje section background
 import { Image } from "astro:assets";
 ---
 
@@ -52,7 +52,7 @@ import { Image } from "astro:assets";
   import { animate, inView } from "motion";
 
   document.addEventListener("DOMContentLoaded", () => {
-    // Add fade-in effect for each section when it comes into view
+    // tilføjer fade in effekt 
     document.querySelectorAll('.sticky').forEach((element, index) => {
       inView(element, () => {
         animate(element, { opacity: 1, transform: "translateY(0)" });
